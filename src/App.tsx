@@ -1,5 +1,6 @@
 import './App.css';
 import { FadeIn } from './FadeIn';
+import { Checkbox, CheckboxGroup } from './checkbox';
 import { Dropdown as DropdownV1 } from './dropdown/v1/Dropdown';
 import { Dropdown as DropdownV2 } from './dropdown/v2/Dropdown';
 import { Dropdown as DropdownV3 } from './dropdown/v3/Dropdown';
@@ -38,6 +39,16 @@ function App() {
           </DropdownV3.List>
         </DropdownV3>
       </FadeIn>
+
+      <h3>Checkbox</h3>
+      <Checkbox>Checkbox</Checkbox>
+
+      <h3>Checkbox Group</h3>
+      <CheckboxGroup defaultValue={['sasuke']}>
+        <Checkbox value="naruto">Naruto</Checkbox>
+        <Checkbox value="sasuke">Sasuke</Checkbox>
+        <Checkbox value="kakashi">Kakashi</Checkbox>
+      </CheckboxGroup>
     </>
   );
 }
