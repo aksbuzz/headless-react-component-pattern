@@ -2,7 +2,7 @@ import { MutableRefObject, RefCallback, useMemo } from 'react';
 
 export type ReactRef<T> = RefCallback<T> | MutableRefObject<T>;
 
-function assignRef<T = unknown>(ref: ReactRef<T> | null | undefined, value: T) {
+export function assignRef<T = unknown>(ref: ReactRef<T> | null | undefined, value: T) {
   if (ref === null) return;
   if (typeof ref === 'function') {
     ref?.(value);

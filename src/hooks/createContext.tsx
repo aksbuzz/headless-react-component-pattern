@@ -2,14 +2,15 @@ import { Provider, createContext as createReactContext, useContext as useReactCo
 
 type Options<T> = {
   defaultValue?: T,
+  strict?: boolean
 }
 
-export function createContext<T>({ defaultValue }: Options<T> = {}) {
+export function createContext<T>({ defaultValue, strict }: Options<T> = {}) {
   const Context = createReactContext<T | undefined>(defaultValue)
   
   function useContext() {
     const ctx = useReactContext(Context);
-    if (!ctx) {
+    if (!ctx && strict) {
       const error = new Error()
       error.name = "ContextError"
       throw error
