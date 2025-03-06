@@ -5,6 +5,7 @@ import { DropdownListItem } from './DropdownListItem';
 import { DropdownTrigger } from './DropdownTrigger';
 import type { DropdownItem } from './types';
 import { useDropdown } from './useDropdown';
+import './Dropdown.css'
 
 type DropdownProps<T> = {
   children: ReactNode;

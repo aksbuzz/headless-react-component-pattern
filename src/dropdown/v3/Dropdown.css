@@ -1,0 +1,18 @@
+.dropdown__trigger {
+  border-width: 1px;
+  padding-inline: .75rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  font-size: 1rem;
+  gap: .5rem;
+  width: 100%;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border-color: #494844;
+  border-style: solid;
+  border-radius: .25rem;
+  cursor: pointer;
+  outline: 0;
+}
